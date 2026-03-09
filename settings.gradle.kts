@@ -1,0 +1,1 @@
+rootProject.name = "webview-automation-template"
