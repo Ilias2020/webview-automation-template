@@ -28,6 +28,10 @@ tasks.test {
     systemProperty("file.encoding", "UTF-8")
 }
 
+tasks.withType<JavaCompile>().configureEach {
+    options.encoding = "UTF-8"
+}
+
 allure {
     report {
         version.set("2.32.0")
