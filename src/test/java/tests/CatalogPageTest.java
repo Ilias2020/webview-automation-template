@@ -15,10 +15,8 @@ public class CatalogPageTest extends BaseTest {
     @Test
     public void catalogPageShouldOpen() {
 
-        Selenide.open("https://mseller.dev.m-market.kg/catalog?query=&tab=all");
-
         CatalogPage catalogPage = new CatalogPage();
-
+        catalogPage.open();
         Assert.assertTrue(catalogPage.isPageOpened(), "Каталог не открылся");
     }
 }
