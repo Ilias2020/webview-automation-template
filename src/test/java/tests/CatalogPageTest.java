@@ -1,18 +1,19 @@
 package tests;
 
+import io.qameta.allure.*;
+import org.testng.annotations.Test;
 
-import com.codeborne.selenide.Selenide;
 import core.BaseTest;
 import org.testng.Assert;
-import org.testng.annotations.Test;
 import pages.CatalogPage;
-
-
-import static com.codeborne.selenide.Selenide.sleep;
 
 public class CatalogPageTest extends BaseTest {
 
-    @Test
+    @Test(description = "Открытие страницы каталога авторизованным пользователем")
+    @Description("Проверка, что страница каталога открывается у уже авторизованного пользователя")
+    @Severity(SeverityLevel.CRITICAL)
+    @Feature("Каталог")
+    @Story("Открытие каталога")
     public void catalogPageShouldOpen() {
 
         CatalogPage catalogPage = new CatalogPage();
